@@ -1,0 +1,33 @@
+/* IMPORT CSS */
+/* Pages */
+@import url("/src/pages/HomePageStyle.css");
+@import url("/src/pages/RecipeBookStyle.css");
+@import url("/src/pages/AboutUsStyle.css");
+@import url("/src/pages/SinglePostPagestyle.css");
+@import url("/src/pages/LoginPageStyle.css");
+/* Layout components */
+@import url("/src/components/Header/HeaderStyle.css");
+@import url("/src/components/Footer/FooterStyle.css");
+/* Components */
+@import url("/src/components/PostCard/PostCardStyle.css");
+@import url("/src/components/FormPostListStyle.css");
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* GENERAL */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 30px;
+}
+
+.homepage.container > h2,
+.contact-us.container > h2 {
+  text-align: center;
+  margin: 20px;
+}
