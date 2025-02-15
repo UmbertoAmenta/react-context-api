@@ -1,13 +1,22 @@
 import React from "react";
 
+// contexts
+import { useNewPostContext } from "./contexts/NewPostContext";
+
 export default function FormPostList({
   formData,
   handlerSubmitFormData,
   handlerFormData,
   deleteList,
 }) {
+  const { setNewPost } = useNewPostContext();
+  const handlerSubmitForm = (e) => {
+    e.preventDefault();
+    handlerSubmitFormData(e);
+    setNewPost(formData);
+  };
   return (
-    <form id="newPostForm" onSubmit={handlerSubmitFormData}>
+    <form id="newPostForm" onSubmit={handlerSubmitForm}>
       <label htmlFor="postTitolo">Titolo*</label>
       <input
         id="postTitolo"

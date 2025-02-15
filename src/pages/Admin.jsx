@@ -5,6 +5,10 @@ import axios from "axios";
 // components
 import PostCard from "../components/PostCard/PostCard";
 import FormPostList from "../components/FormPostList";
+import NewPostAlert from "../components/NewPostAlert";
+
+// contexts
+import { useNewPostContext } from "../components/contexts/NewPostContext";
 
 const initialData = {
   titolo: "",
@@ -18,6 +22,7 @@ const initialData = {
 export default function Admin() {
   const [formData, setFormData] = useState(initialData);
   const [list, setList] = useState([]);
+  const { setNewPost } = useNewPostContext();
 
   const fetchPosts = () => {
     axios.get("http://localhost:3000/posts").then(function (response) {
@@ -33,6 +38,7 @@ export default function Admin() {
         const currentList = [...list, response.data];
         setList((currentList) => [...currentList, response.data]);
         setFormData(initialData);
+        setNewPost(response.data);
       });
   };
 
@@ -88,6 +94,7 @@ export default function Admin() {
               handlerFormData={handlerFormData}
               deleteList={deleteList}
             />
+            <NewPostAlert />
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import axios from "axios";
 
 // components
 import PostCard from "../components/PostCard/PostCard";
+import Search from "../components/Search";
 // import FormPostList from "../components/FormPostList";
 
 const initialData = {
@@ -65,6 +66,7 @@ export default function RecipeBook() {
           <Link to="/admin/login" className="btn-login">
             Login
           </Link>
+          // <Search/>
         )}
         <div className="flex">
           <ul>

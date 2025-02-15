@@ -1,5 +1,5 @@
 /* POST-CARD */
-ul li {
+li.card {
   position: relative;
   list-style: none;
   width: calc(100% / 4);
@@ -7,54 +7,53 @@ ul li {
   background-size: contain;
   box-shadow: 1px 1px 10px black;
   border-radius: 15px;
-}
 
-li span:first-child a {
-  font-size: 18px;
-  text-decoration: none;
-  color: black;
-}
+  & span:first-child a {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+  }
 
-li span:first-child + div {
-  text-align: right;
-  font-size: 14px;
-}
+  & span:first-child + div {
+    text-align: right;
+    font-size: 14px;
+  }
 
-ul li .imgSlot {
-  aspect-ratio: 4/3;
-}
+  & .imgSlot {
+    aspect-ratio: 4/3;
+  }
 
-ul li img {
-  width: 100%;
-  object-fit: cover;
-  aspect-ratio: 4/3;
-}
+  & img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+  }
 
-ul li .description {
-  height: 100px;
-  overflow-y: hidden;
-  padding-right: 5px;
-}
+  & .description {
+    height: 100px;
+    overflow-y: hidden;
+    padding-right: 5px;
+  }
 
-ul li .description:hover {
-  overflow-y: auto;
-}
+  & .description:hover {
+    overflow-y: auto;
+  }
 
-ul li [type="button"] {
-  border-color: red;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 25px;
-  font-size: 12px;
-  padding: 5px;
-}
+  & [type="button"] {
+    border-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 25px;
+    font-size: 12px;
+    padding: 5px;
+  }
 
-ul li [type="button"]:hover {
-  cursor: pointer;
-}
-
-li div:last-child {
-  display: flex;
-  justify-content: space-between;
+  & [type="button"]:hover {
+    cursor: pointer;
+  }
+  & div:last-child {
+    display: flex;
+    justify-content: space-between;
+  }
 }

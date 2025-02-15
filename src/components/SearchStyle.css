@@ -1,0 +1,30 @@
+/* ALERT */
+.alert {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-align: center;
+  padding: 45px 25px;
+  background-color: white;
+  box-shadow: 1px 1px 10px red;
+  border-radius: 20px;
+
+  & > div {
+    margin-top: 15px;
+
+    button {
+      padding: 5px;
+      background-color: lightgrey;
+      border: none;
+
+      &:first-of-type {
+        border-start-start-radius: 15px;
+        margin-right: 3px;
+      }
+
+      &:last-of-type {
+        border-end-end-radius: 10px;
+      }
+    }
+  }
+}

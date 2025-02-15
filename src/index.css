@@ -11,6 +11,8 @@
 /* Components */
 @import url("/src/components/PostCard/PostCardStyle.css");
 @import url("/src/components/FormPostListStyle.css");
+@import url("/src/components/SearchStyle.css");
+@import url("/src/components/NewPostAlertStyle.css");
 
 /* RESET */
 * {
