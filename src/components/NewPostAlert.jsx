@@ -9,7 +9,7 @@ export default function NewPostAlert() {
   }
   return (
     <div className="newPostAlert">
-      <h2>Nuovo Post</h2>
+      <h3> Ultimo nuovo Post</h3>
       <ul>
         <li>
           <em>ID (DB)</em>: {newPost.id}
@@ -18,7 +18,7 @@ export default function NewPostAlert() {
           <em>Titolo</em>: {newPost.titolo}
         </li>
         <li>
-          <em>Ricetta</em>:
+          <em>Ricetta</em>:{" "}
           {newPost.dellaTradizione ? "Tradizionale" : "Rivisitata"}
         </li>
       </ul>

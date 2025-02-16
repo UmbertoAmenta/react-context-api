@@ -1,0 +1,7 @@
+/* ALERT */
+.alert {
+  text-align: center;
+  padding: 45px 25px;
+  box-shadow: 1px 1px 10px red;
+  border-radius: 20px;
+}
