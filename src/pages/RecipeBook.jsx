@@ -5,7 +5,6 @@ import axios from "axios";
 // components
 import PostCard from "../components/PostCard/PostCard";
 import Search from "../components/Search";
-// import FormPostList from "../components/FormPostList";
 
 const initialData = {
   titolo: "",
@@ -17,7 +16,6 @@ const initialData = {
 };
 
 export default function RecipeBook() {
-  // const [formData, setFormData] = useState(initialData);
   const [list, setList] = useState([]);
 
   const onlyAdmin = useLocation();
@@ -28,53 +26,29 @@ export default function RecipeBook() {
     });
   };
 
-  // const handlerSubmitFormData = (event) => {
-  //   event.preventDefault();
-  //   axios
-  //     .post("http://localhost:3000/posts", formData)
-  //     .then(function (response) {
-  //       const currentList = [...list, response.data];
-  //       setList((currentList) => [...currentList, response.data]);
-  //       setFormData(initialData);
-  //     });
-  // };
-
-  // const handlerDeletePost = (postId) => {
-  //   axios.delete(`http://localhost:3000/posts/${postId}`).then(() => {
-  //     setList((currentList) =>
-  //       currentList.filter((post) => post.id !== postId)
-  //     );
-  //   });
-  // };
-
   // ha effetto solo sul client
   const deleteList = () => setList([]);
 
   useEffect(fetchPosts, []);
 
-  // const handlerFormData = (field, value) => {
-  //   setFormData((currentFormData) => {
-  //     return { ...currentFormData, [field]: value };
-  //   });
-  // };
-
   return (
     <>
       <div className="container book">
-        <h2>Il Ricettario</h2>
-        {onlyAdmin.pathname === "/recipe-book" && (
-          <Link to="/admin/login" className="btn-login">
-            Login
-          </Link>
-          // <Search/>
-        )}
+        <div>
+          <h2>Il Ricettario</h2>
+          <Search recipes={list} />
+          {onlyAdmin.pathname === "/recipe-book" && (
+            <Link to="/admin/login" className="btn-login">
+              Login
+            </Link>
+          )}
+        </div>
         <div className="flex">
           <ul>
             {list.map((post) => {
               return (
                 <PostCard
                   key={post.id}
-                  // post={post}
                   id={post.id}
                   titolo={post.titolo}
                   contenuto={post.contenuto}
@@ -87,13 +61,6 @@ export default function RecipeBook() {
               );
             })}
           </ul>
-
-          {/* <FormPostList
-            formData={formData}
-            handlerSubmitFormData={handlerSubmitFormData}
-            handlerFormData={handlerFormData}
-            deleteList={deleteList}
-          /> */}
         </div>
       </div>
     </>

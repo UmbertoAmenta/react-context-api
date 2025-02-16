@@ -13,6 +13,7 @@
 @import url("/src/components/FormPostListStyle.css");
 @import url("/src/components/NewPostAlertStyle.css");
 @import url("/src/components/AlertStyle.css");
+@import url("/src/components/SearchStyle.css");
 
 /* RESET */
 * {

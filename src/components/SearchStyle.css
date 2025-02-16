@@ -1,0 +1,35 @@
+/* SEARCH */
+.search {
+  margin: 20px auto 40px;
+
+  & div {
+    margin-top: 10px;
+    display: flex;
+
+    & * {
+      padding: 10px;
+      background-color: white;
+      border: none;
+      box-shadow: 1px 1px 10px black;
+      color: grey;
+    }
+
+    & input {
+      border-start-start-radius: 15px;
+    }
+
+    & button {
+      border-end-end-radius: 15px;
+      cursor: pointer;
+    }
+  }
+
+  & ul {
+    display: block;
+    margin-top: 20px;
+    & li {
+      list-style: none;
+      margin-bottom: 5px;
+    }
+  }
+}
